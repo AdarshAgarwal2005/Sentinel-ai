@@ -6,7 +6,6 @@ __pycache__/
 ml-server/venv/
 
 # ML artifacts
-ml-server/datasets/
 ml-server/saved_models/
 
 # Node
