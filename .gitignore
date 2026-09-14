@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Python virtual env
+ml-server/venv/
+
+# ML artifacts
+ml-server/saved_models/
+ml-server/datasets/
+
+# Node
+node-server/node_modules/
+node-server/dist/
+
+# Env files
+.env
+
+# OS
+.DS_Store
+Thumbs.db

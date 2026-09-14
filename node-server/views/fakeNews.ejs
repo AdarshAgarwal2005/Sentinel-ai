@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SENTINEL.AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand ms-3" href="/">SENTINEL.AI</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item"><a class="nav-link" href="/fake-news">Fake News</a></li>
+            <li class="nav-item"><a class="nav-link" href="/toxicity">Toxicity</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sentiment">Sentiment</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Fake News Detection</h1>
+
+    <form action="/fake-news" method="POST">
+        <label for="content">News Content:</label><br>
+        <textarea name="content" id="content" rows="8" cols="60" required><%= content || '' %></textarea><br><br>
+        <button type="submit" class="btn btn-primary">Check News</button>
+    </form>
+
+    <% if (result) { %>
+        <h2 class="mt-4">Result:</h2>
+        <p><strong>Label:</strong> <%= result.label %></p>
+        <p><strong>Confidence:</strong> <%= result.confidence %> %</p>
+    <% } %>
+</div>
+</body>
+</html>
